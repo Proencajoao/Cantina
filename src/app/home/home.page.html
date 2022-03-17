@@ -1,0 +1,113 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="titulo" color="primari"> 
+    <ion-title >
+      Cantina do Seu Zé
+      <div class="reset">
+        <button class="btnOutline btn btn-outline" (click)="reset()">
+          C
+        </button>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <table class="table text-center">
+    <thead class="tabelaUm">
+      <tr>
+        <td>Prod.</td>
+        <td>R$</td>
+        <td colspan="3">Ações</td>
+      </tr>
+    </thead>
+
+    <tbody class="corpo">
+      <tr class="">
+        <td>HotDog</td>
+        <td>R$ 5,00</td>
+        <td>
+          <button class="botaoMenos btn btn" (click)="delHotDog()" [disabled]="hotdog <=0">
+            -
+          </button>
+        </td>
+        <td>
+          <input type="text" class="w-100" [(ngModel)]="hotdog" (keyup)="total()">
+        </td>
+        <td>
+          <button class="botaoMais btn btn" (click)="addHotDog()">
+            +
+          </button>
+        </td>
+      </tr>
+    </tbody>
+
+    <tbody class="corpo">
+      <tr class="">
+        <td>Refri</td>
+        <td>R$ 3,50</td>
+        <td>
+          <button class="botaoMenos btn btn" (click)="delRefri()" [disabled]="refri <=0">
+            -
+          </button>
+        </td>
+        <td>
+          <input type="text" class="w-100" [(ngModel)]="refri">
+        </td>
+        <td>
+          <button class="botaoMais btn btn" (click)="addRefri()">
+            +
+          </button>
+        </td>
+      </tr>
+    </tbody>
+
+    <tbody class="corpo">
+      <tr class="">
+        <td>Bala</td>
+        <td>R$ 0,25</td>
+        <td>
+          <button class="botaoMenos btn btn" (click)="delBala()" [disabled]="bala <=0">
+            -
+          </button>
+        </td>
+        <td>
+          <input type="text" class="w-100" [(ngModel)]="bala">
+        </td>
+        <td>
+          <button class="botaoMais btn btn" (click)="addBala()">
+            +
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    
+    <tbody class="corpo">
+      <tr class="">
+        <td>Chocolate</td>
+        <td>R$ 2,00</td>
+        <td>
+          <button class="botaoMenos btn btn" (click)="delChoco()" [disabled]="chocolate <=0">
+            -
+          </button>
+        </td>
+        <td>
+          <input type="text" class="w-100" [(ngModel)]="chocolate">
+        </td>
+        <td>
+          <button class="botaoMais btn btn" (click)="addChoco()">
+            +
+          </button>
+        </td>
+      </tr>
+    </tbody> 
+  </table>
+
+  <div class=" total">
+    <ion-item>
+      <ion-label>
+        Total: R$ {{ soma }}
+      </ion-label>
+    </ion-item>
+  </div>
+</ion-content>

@@ -1,0 +1,64 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+
+.input-100{
+  width: 100px !important;
+}
+
+.reset{
+  float: right;
+}
+.botaoMenos{
+  background-color: red;
+  color: white;
+}
+
+.botaoMais{
+  background-color: rgb(78, 190, 78);
+  color: white;
+}
+
+.titulo{
+  background-color: black;
+  color: white;
+}
+.btnOutline{
+  color: white;
+  border-style: solid;
+  border-color: white;
+}
+.tabelaUm{
+  background-color: #d8d8d8;
+}
+
+.corpo{
+  background-color: black;
+  color: white;
+}
+
